@@ -96,7 +96,7 @@ export default class Welcome extends Vue {
   @Watch("$route")
   onRouterChange(route: Route) {}
   mounted() {
-    console.log(1)
+    console.log(1);
     this.token = HomeModule.getToken;
     this.name = HomeModule.getName;
   }

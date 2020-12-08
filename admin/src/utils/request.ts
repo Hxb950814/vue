@@ -123,6 +123,8 @@ function get(
   });
 }
 
+// @ts-ignore
+// @ts-ignore
 function post(
   path: string,
   params = {},

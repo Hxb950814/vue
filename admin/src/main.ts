@@ -9,12 +9,15 @@ import "@/assets/styles/index.scss";
 Vue.config.productionTip = false;
 // 注册全局指令
 Object.keys(directives).forEach((key: string) => {
-  Vue.directive(key, (directives as { [key: string]: DirectiveOptions })[key]);
+  Vue.directive(
+    key,
+    directives as { [key: string]: DirectiveOptions }[typeof key]
+  );
 });
 
 // 注册全局过滤器
 Object.keys(filters).forEach((key: string) => {
-  Vue.filter(key, (filters as { [key: string]: Function })[key]);
+  Vue.filter(key, filters as { [key: string]: Function }[typeof key]);
 });
 new Vue({
   router,

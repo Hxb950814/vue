@@ -78,11 +78,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Watch } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 import { Headbar } from "@/views/layout/components/index";
 import mapsRouterData from "@/router/maps";
 import { HomeModule } from "@/store/modules/user/home";
-import { Route } from "vue-router";
+
 @Component({
   components: {
     Headbar
@@ -91,10 +91,6 @@ import { Route } from "vue-router";
 export default class Welcome extends Vue {
   token = ""; // 用户token
   name = ""; // 用户姓名
-
-  // 路由发生了变化，重新渲染路由
-  @Watch("$route")
-  onRouterChange(route: Route) {}
   mounted() {
     this.token = HomeModule.getToken;
     this.name = HomeModule.getName;

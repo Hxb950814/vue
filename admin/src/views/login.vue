@@ -180,7 +180,7 @@ export default class Login extends Vue {
     HomeModule.setName(this.editData.username);
     setTimeout(() => {
       this.isLogin = false;
-      location.href = "/welcome";
+      location.href = "/#/welcome";
     }, 200);
   }
 }

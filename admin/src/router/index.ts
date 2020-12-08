@@ -35,7 +35,7 @@ const constantRouterMap = [
 ];
 const router = new Router({
   mode: "hash", // 线上用history模式
-  base: "./",
+  // base: "/",
   scrollBehavior: () => ({
     x: 0,
     y: 0

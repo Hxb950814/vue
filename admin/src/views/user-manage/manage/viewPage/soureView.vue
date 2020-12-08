@@ -121,7 +121,7 @@ export default class extends Vue {
           type: "category",
           boundaryGap: true,
           show: false,
-          data: this.nearData
+          data: []
         }
       ],
       series: [

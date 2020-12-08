@@ -112,7 +112,7 @@ export default class Welcome extends Vue {
           mId: id
         }
       });
-      location.href = secModuleMap.defaultLink + "?mId=" + id;
+      location.href = secModuleMap.defaultLink;
     } else {
       // @ts-ignore
       this.$message({

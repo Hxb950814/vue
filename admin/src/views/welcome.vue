@@ -92,7 +92,7 @@ export default class Welcome extends Vue {
   token = ""; // 用户token
   name = ""; // 用户姓名
   mounted() {
-    if(HomeModule.getToken) {
+    if (HomeModule.getToken) {
       this.token = HomeModule.getToken;
       this.name = HomeModule.getName;
     }

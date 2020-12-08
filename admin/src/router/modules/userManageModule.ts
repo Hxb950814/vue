@@ -25,7 +25,7 @@ export default [
       {
         meta: {
           groupId,
-          title: "全部"
+          title: "全部用户"
         },
         id: "0201",
         path: "all/list", // 欢迎页
@@ -34,7 +34,7 @@ export default [
       {
         meta: {
           groupId,
-          title: "管理"
+          title: "角色管理"
         },
         id: "0201",
         path: "manage/list", // 欢迎页

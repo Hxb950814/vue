@@ -5,7 +5,6 @@ import router from "./router";
 import store from "./store";
 import "./elementUi/index.js";
 import "@/assets/styles/index.scss";
-
 Vue.config.productionTip = false;
 // 注册全局指令
 Object.keys(directives).forEach((key: string) => {

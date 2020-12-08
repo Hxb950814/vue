@@ -12,6 +12,7 @@
     "axios": "^0.21.0",
     "core-js": "^3.6.5",
     "dayjs": "^1.9.6",
+    "echarts": "^4.9.0",
     "lodash": "^4.17.20",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
@@ -60,7 +61,10 @@
       "ecmaVersion": 2020
     },
     "rules": {
-      "semi": [2, "always"],
+      "semi": [
+        2,
+        "always"
+      ],
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-unused-vars": "off",
       "@typescript-eslint/camelcase": "off",
@@ -77,11 +81,16 @@
       "no-empty": 0,
       "no-return-await": "off",
       "require-await": 0,
-      "camelcase": 0,
-      "eqeqeq": [2, "allow-null"],
+      "eqeqeq": [
+        2,
+        "allow-null"
+      ],
       "no-var": 0,
       "default-case": 2,
-      "indent": [0, 4]
+      "indent": [
+        0,
+        4
+      ]
     }
   },
   "browserslist": [

@@ -14,7 +14,7 @@
         </div>
         <div class="block-union" @click="clickModule('03')">
           <div class="image-wrap">
-            <img src="//rs.tanxingk.com/images/main_sec2.png" alt="" />
+            <img src="@assets/images/head_icon.jpg" alt="" />
           </div>
           <div class="text">
             统计
@@ -22,7 +22,7 @@
         </div>
         <div class="block-union" @click="clickModule('04')">
           <div class="image-wrap">
-            <img src="//rs.tanxingk.com/images/main_sec3.png" alt="" />
+            <img src="@assets/images/head_icon.jpg" alt="" />
           </div>
           <div class="text">
             信息
@@ -30,7 +30,7 @@
         </div>
         <div class="block-union" @click="clickModule('05')">
           <div class="image-wrap">
-            <img src="//rs.tanxingk.com/images/main_sec4.png" alt="" />
+            <img src="@assets/images/head_icon.jpg" alt="" />
           </div>
           <div class="text">
             资料
@@ -38,7 +38,7 @@
         </div>
         <div class="block-union" @click="clickModule('06')">
           <div class="image-wrap">
-            <img src="//rs.tanxingk.com/images/main_sec5.png" alt="" />
+            <img src="@assets/images/head_icon.jpg" alt="" />
           </div>
           <div class="text">
             背景
@@ -46,7 +46,7 @@
         </div>
         <div class="block-union" @click="clickModule('07')">
           <div class="image-wrap">
-            <img src="//rs.tanxingk.com/images/main_sec6.png" alt="" />
+            <img src="@assets/images/head_icon.jpg" alt="" />
           </div>
           <div class="text">
             图片
@@ -54,7 +54,7 @@
         </div>
         <div class="block-union" @click="clickModule('08')">
           <div class="image-wrap">
-            <img src="//rs.tanxingk.com/images/main_sec7.png" alt="" />
+            <img src="@assets/images/head_icon.jpg" alt="" />
           </div>
           <div class="text">
             账户
@@ -62,7 +62,7 @@
         </div>
         <div class="block-union" @click="clickModule('09')">
           <div class="image-wrap">
-            <img src="//rs.tanxingk.com/images/main_sec8.png" alt="" />
+            <img src="@assets/images/head_icon.jpg" alt="" />
           </div>
           <div class="text">
             权限

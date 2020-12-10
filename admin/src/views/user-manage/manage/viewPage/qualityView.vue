@@ -187,19 +187,19 @@ export default class extends Vue {
   h2 {
     display: flex;
     align-items: center;
-    font-size: 15px;
+    font-size: $x15;
     color: #333;
     position: relative;
     span {
-      width: 20px !important;
+      width: $x20 !important;
       display: flex;
       align-items: center;
     }
     .svgBtn {
       border: none;
-      height: 20px;
+      height: $x20;
       display: flex;
-      width: 20px !important;
+      width: $x20 !important;
       padding: 0;
       span {
         line-height: 0;
@@ -207,16 +207,7 @@ export default class extends Vue {
     }
   }
   .charts {
-    margin-top: 20px;
-  }
-  .hbb-noData {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    font-size: 14px;
-    color: #666;
+    margin-top: $x20;
   }
 }
 </style>

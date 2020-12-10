@@ -25,7 +25,7 @@ export function showLoading(): number {
 export function closeLoading(immediate = false /* 是否马上关闭 */) {
   if (loadingInstance) {
     const diff = Date.now() - loadingStartTime - 130;
-    if (immediate === true || diff >= 0) {
+    if (immediate || diff >= 0) {
       if (loadingTimeoutHandle >= 0) {
         window.clearTimeout(loadingTimeoutHandle);
         loadingTimeoutHandle = -1;

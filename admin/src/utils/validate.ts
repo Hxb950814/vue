@@ -1,4 +1,4 @@
-import { isMobile, isIdNumber, isEmail } from "@/utils/index.ts";
+import admin from "@/utils/index.ts";
 
 type TypeErrorCallBack = (param?: undefined | Error) => void;
 
@@ -37,7 +37,7 @@ export function getValidateMobile(params?: any) {
       } else {
         callback(new Error("请输入"));
       }
-    } else if (!isMobile(value)) {
+    } else if (!admin.isMobile(value)) {
       callback(new Error("请输入正确的手机号"));
     } else {
       callback();
@@ -60,7 +60,7 @@ export function getValidateEmail(params?: any) {
       } else {
         callback(new Error("请输入"));
       }
-    } else if (value && !isEmail(value)) {
+    } else if (value && !admin.isEmail(value)) {
       callback(new Error("请输入正确的邮箱"));
     } else {
       callback();
@@ -85,7 +85,7 @@ export function getValidateIdCard(params?: any) {
       }
     } else if (value.length !== 18) {
       callback(new Error("身份证号长度为18位"));
-    } else if (!isIdNumber(value)) {
+    } else if (!admin.isIdNumber(value)) {
       callback(new Error("请输入正确的身份证号"));
     } else {
       callback();

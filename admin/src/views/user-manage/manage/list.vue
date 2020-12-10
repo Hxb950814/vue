@@ -41,6 +41,7 @@ import AgeView from "./viewPage/ageView.vue";
 import AreaView from "./viewPage/areaView.vue";
 import SoureView from "./viewPage/soureView.vue";
 import QalityView from "./viewPage/qualityView.vue";
+import admin from "@/utils/index.ts";
 @Component({
   components: {
     SexView,
@@ -51,7 +52,13 @@ import QalityView from "./viewPage/qualityView.vue";
     QalityView
   }
 })
-export default class extends Vue {}
+export default class extends Vue {
+  mounted() {
+    console.log(admin.changeNumMoneyToChinese("1230000001"));
+    console.log(admin.getBetween(5));
+  }
+  add() {}
+}
 </script>
 
 <style lang="scss" scoped>
@@ -59,12 +66,12 @@ export default class extends Vue {}
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: $x20 0;
   border: 1px solid #ddd;
-  margin-bottom: 20px;
+  margin-bottom: $x20;
   .o {
     width: 50%;
-    padding: 0 20px;
+    padding: 0 $x20;
     &:nth-of-type(1) {
       border-right: 1px solid #ddd;
     }

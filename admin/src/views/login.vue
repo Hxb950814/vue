@@ -4,7 +4,7 @@
     <CanvasOne class="hbb-canvas"></CanvasOne>
     <div class="login-section">
       <p class="logo-title">
-        韩小豹
+        自我管控系统
       </p>
       <div class="login-block">
         <div class="show-pic">
@@ -100,9 +100,9 @@ let codeTimeHandle = -1;
 })
 export default class Login extends Vue {
   editData = {
-    username: "韩小豹", // 用户名
-    password: "123456", // 验证码
-    code: "4567" // code
+    username: "", // 用户名
+    password: "", // 验证码
+    code: "" // code
   };
 
   codeImgSrc = ""; // 图片验证码地址
@@ -149,30 +149,30 @@ export default class Login extends Vue {
   }
 
   async doLogin() {
-    if (this.editData.username !== config.userInfo.name) {
-      // @ts-ignore
-      this.$message({
-        type: "error",
-        message: "用户名错误"
-      });
-      return false;
-    }
-    if (this.editData.password !== config.userInfo.password) {
-      // @ts-ignore
-      this.$message({
-        type: "error",
-        message: "密码错误"
-      });
-      return false;
-    }
-    if (this.editData.code !== config.userInfo.code) {
-      // @ts-ignore
-      this.$message({
-        type: "error",
-        message: "验证码错误"
-      });
-      return false;
-    }
+    // if (this.editData.username !== config.userInfo.name) {
+    //   // @ts-ignore
+    //   this.$message({
+    //     type: "error",
+    //     message: "用户名错误"
+    //   });
+    //   return false;
+    // }
+    // if (this.editData.password !== config.userInfo.password) {
+    //   // @ts-ignore
+    //   this.$message({
+    //     type: "error",
+    //     message: "密码错误"
+    //   });
+    //   return false;
+    // }
+    // if (this.editData.code !== config.userInfo.code) {
+    //   // @ts-ignore
+    //   this.$message({
+    //     type: "error",
+    //     message: "验证码错误"
+    //   });
+    //   return false;
+    // }
     this.isLogin = true;
     // 登录成功存储token用于识别
     const startTime = Date.now();

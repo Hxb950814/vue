@@ -6,7 +6,7 @@
       </a>
 
       <span class="welcome-text">
-        欢迎 {{ userName }} 进入{{ moduleName || "L世界" }}，祝您一生平安！
+        欢迎 {{ userName }} 进入{{ moduleName || "Hxb世界" }}，祝您一生平安！
       </span>
     </div>
 

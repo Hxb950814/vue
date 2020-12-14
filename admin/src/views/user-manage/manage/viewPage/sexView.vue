@@ -83,7 +83,9 @@ export default class extends Vue {
         text: ""
       },
       tooltip: {
+        show: true,
         trigger: "item",
+        background: "red",
         formatter: "{a} <br/>{b} : {c} ({d}%)"
       },
       grid: {
@@ -92,14 +94,6 @@ export default class extends Vue {
         bottom: "0%",
         containLabel: true
       },
-      xAxis: [
-        {
-          type: "category",
-          boundaryGap: true,
-          show: false,
-          data: this.sexlist
-        }
-      ],
 
       legend: {
         orient: "vertical",
@@ -133,6 +127,7 @@ export default class extends Vue {
           itemStyle: {
             normal: {
               color(params: any) {
+                console.log(params);
                 // 自定义颜色
                 const colorList = ["#66ABFF", "#FF7DB5", "#FFB727"];
                 return colorList[params.dataIndex];

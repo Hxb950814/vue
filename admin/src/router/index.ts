@@ -29,6 +29,11 @@ const constantRouterMap = [
     component: () => import("@/views/login.vue")
   },
   {
+    path: "/test",
+    name: "test",
+    component: () => import("@/views/test.vue")
+  },
+  {
     path: "*",
     component: () => import("../views/404.vue")
   }

@@ -75,7 +75,7 @@ module.exports = {
         pluginsList.push(
           new WebpackCdnPlugin({
             modules: buildConfig.cdnConfig, // CDN
-            pathToNodeModules: path.resolve(__dirname, "./../") // 在父目录
+            pathToNodeModules: path.resolve(__dirname, "./") // 在父目录
           })
         );
       }

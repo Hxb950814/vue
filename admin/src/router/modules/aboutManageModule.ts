@@ -19,7 +19,7 @@ export default [
           title: "背景模块"
         },
         path: "index", // 欢迎页
-        component: (resolve:any) => (require(["@/views/about-manage/index.vue"], resolve))
+        component: () => import("@/views/about-manage/index.vue")
       }
     ]
   }

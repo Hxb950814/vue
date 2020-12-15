@@ -19,7 +19,7 @@ export default [
           title: "账户模块"
         },
         path: "index", // 欢迎页
-        component:(resolve:any) =>(require(["@/views/account-manage/index.vue"],resolve))
+        component: () => import("@/views/account-manage/index.vue")
       }
     ]
   }

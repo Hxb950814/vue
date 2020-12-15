@@ -19,7 +19,7 @@ export default [
           title: "信息模块"
         },
         path: "index", // 欢迎页
-        component:(resolve:any) =>(require(["@/views/information-manage/index.vue"],resolve))
+        component: () => import("@/views/information-manage/index.vue")
       }
     ]
   }

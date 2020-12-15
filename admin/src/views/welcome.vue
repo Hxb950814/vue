@@ -95,6 +95,8 @@ export default class Welcome extends Vue {
     if (HomeModule.getToken) {
       this.token = HomeModule.getToken;
       this.name = HomeModule.getName;
+    } else {
+      location.href = "/login";
     }
   }
 

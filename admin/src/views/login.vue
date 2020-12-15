@@ -4,7 +4,7 @@
     <CanvasOne class="hbb-canvas"></CanvasOne>
     <div class="login-section">
       <p class="logo-title">
-        自我管控系统
+        小豹管控系统
       </p>
       <div class="login-block">
         <div class="show-pic">

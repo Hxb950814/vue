@@ -20,7 +20,7 @@ export default [
         },
         id: "0201",
         path: "index", // 欢迎页
-        component: () => import("@/views/user-manage/index.vue")
+        component: (resolve:any) =>(require(["@/views/user-manage/index.vue"],resolve))
       },
       {
         meta: {
@@ -29,7 +29,7 @@ export default [
         },
         id: "0201",
         path: "all/list", // 欢迎页
-        component: () => import("@/views/user-manage/all/list.vue")
+        component: (resolve:any) =>(require(["@/views/user-manage/all/list.vue"],resolve))
       },
       {
         meta: {
@@ -38,7 +38,7 @@ export default [
         },
         id: "0201",
         path: "manage/list", // 欢迎页
-        component: () => import("@/views/user-manage/manage/list.vue")
+        component: (resolve: any) => (require(["@/views/user-manage/manage/list.vue"], resolve))
       }
     ]
   }

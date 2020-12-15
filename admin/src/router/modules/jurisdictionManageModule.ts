@@ -19,7 +19,7 @@ export default [
           title: "权限模块"
         },
         path: "index", // 欢迎页
-        component: () => import("@/views/jurisdiction-manage/index.vue")
+        component:(resolve:any) =>(require(["@/views/jurisdiction-manage/index.vue"],resolve))
       }
     ]
   }

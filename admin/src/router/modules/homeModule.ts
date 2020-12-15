@@ -12,6 +12,6 @@ export default [
       title: "后台首页"
     },
     path: "/welcome",
-    component: () => import("@/views/welcome.vue")
+    component: (resolve:any) =>(require(["@/views/welcome.vue"],resolve))
   }
 ];

@@ -19,7 +19,7 @@ export default [
           title: "统计模块"
         },
         path: "index", // 欢迎页
-        component: () => import("@/views/statistics-manage/index.vue")
+        component:(resolve:any) =>(require(["@/views/statistics-manage/index.vue"],resolve))
       }
     ]
   }

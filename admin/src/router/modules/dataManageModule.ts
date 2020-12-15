@@ -19,7 +19,7 @@ export default [
           title: "资料模块"
         },
         path: "index", // 欢迎页
-        component: () => import("@/views/data-manage/index.vue")
+        component: (resolve:any) =>(require(["@/views/data-manage/index.vue"],resolve))
       }
     ]
   }

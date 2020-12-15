@@ -19,7 +19,7 @@ export default [
           title: "图片模块"
         },
         path: "index", // 欢迎页
-        component: () => import("@/views/picture-manage/index.vue")
+        component:(resolve:any) =>(require(["@/views/picture-manage/index.vue"],resolve))
       }
     ]
   }

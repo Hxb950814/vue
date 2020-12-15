@@ -1,10 +1,15 @@
 const path = require("path");
-// const webpack = require("webpack");
+const webpack = require("webpack");
 const chalk = require("chalk");
+const WebpackCdnPlugin = require("webpack-cdn-plugin");
 const isProdEnv = process.env.NODE_ENV === "production";
 const isDevEnv = process.env.NODE_ENV === "development";
 const runEnv = process.env.API_ENV; // api环境
 const runPort = process.env.PORT; // 运行端口
+
+const git = require("./build/git"); // 获取当前的打包分支
+const buildConfig = require("./build/build_config"); // 打包配置
+
 const apiProxyPath =
   runEnv === 0
     ? process.env.DEV_PROXY_0
@@ -60,6 +65,22 @@ module.exports = {
     externals: {
       $: "jquery"
     },
+    plugins: (() => {
+      const pluginsList = [new webpack.SourceMapDevToolPlugin({})];
+      if (isProdEnv) {
+        // console.log('git地址:', git.getCurrentBranchName());
+        const branchName = git.getCurrentBranchName();
+        console.log(chalk.green("当前打包分支:", branchName));
+        // 使用CDN
+        pluginsList.push(
+          new WebpackCdnPlugin({
+            modules: buildConfig.cdnConfig, // CDN
+            pathToNodeModules: path.resolve(__dirname, "./../") // 在父目录
+          })
+        );
+      }
+      return pluginsList;
+    })(),
     optimization: {
       minimizer: []
     }

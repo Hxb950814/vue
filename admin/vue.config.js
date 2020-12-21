@@ -42,8 +42,7 @@ module.exports = {
         // 切割代码
         chunks: "all"
       });
-    }
-    if (process.env.NODE_ENV === "production") {
+      // 为生产环境修改配置... 查看打包体积
       if (process.env.npm_config_report) {
         config
           .plugin("webpack-bundle-analyzer")
@@ -52,6 +51,7 @@ module.exports = {
         config.plugins.delete("prefetch");
       }
     }
+
     config.resolve.alias
       .set("@", path.resolve(__dirname, "src"))
       .set("@root", path.resolve(__dirname, "./../"))

@@ -9,7 +9,7 @@
             <img src="@assets/images/head_icon.jpg" alt="" />
           </div>
           <div class="text">
-            用户1
+            用户
           </div>
         </div>
         <div class="block-union" @click="clickModule('03')">
